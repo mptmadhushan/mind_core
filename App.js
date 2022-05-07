@@ -9,7 +9,6 @@ const Stack = createStackNavigator();
 import Tabs from './src/navigation/tabs';
 import Home from './src/screens/Home';
 import OnBoard from './src/screens/OnBoarding';
-import OnBoard2 from './src/screens/OnBoarding2';
 import LogIn from './src/screens/LogIn';
 import Register from './src/screens/Register';
 import Quiz from './src/screens/Quiz';
@@ -47,7 +46,6 @@ const App = () => {
           <Stack.Screen name="EnglishResults" component={EnglishResults} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="OnBoard" component={OnBoard} />
-          <Stack.Screen name="OnBoard2" component={OnBoard2} />
           <Stack.Screen name="Login" component={LogIn} />
           <Stack.Screen name="RegisterScreen" component={Register} />
           <Stack.Screen name="QuizPred" component={QuizPred} />
