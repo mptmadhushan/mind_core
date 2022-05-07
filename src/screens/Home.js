@@ -30,7 +30,7 @@ const Home = ({ navigation }) => {
 					<View style={styles.containerNew}>
 						<TouchableOpacity
 							onPress={() => {
-								navigation.navigate('IQ');
+								navigation.navigate('DrawingTest');
 							}}
 						>
 							<ImageBackground
@@ -38,7 +38,7 @@ const Home = ({ navigation }) => {
 								source={require('../assets/teacher.png')}
 							>
 								<Text style={styles.title}>
-									Tap! {'\n'}to start IQ{'\n'}TEST
+									Tap! {'\n'}to start Drawing Test{'\n'}TEST
 								</Text>
 							</ImageBackground>
 						</TouchableOpacity>
