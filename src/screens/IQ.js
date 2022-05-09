@@ -318,12 +318,12 @@ const Iq = ({ navigation }) => {
 									justifyContent: 'center'
 								}}
 							>
-								{/* <TouchableOpacity
+								<TouchableOpacity
                   style={styles.buttonStyle}
                   activeOpacity={0.5}
                   onPress={() => navigation.navigate('IQResults')}>
                   <Text style={styles.buttonTextStyle}>Continue</Text>
-                </TouchableOpacity> */}
+                </TouchableOpacity>
 							</View>
 						</View>
 					</View>

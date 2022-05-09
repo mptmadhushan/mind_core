@@ -15,7 +15,7 @@ const QuizResults = ({ navigation, route }) => {
 
 		// play();
 	};
-	const { resData } = route.params;
+	// const { resData } = route.params;
 
 	const handlePlay = () => {
 		navigation.navigate('Home');
@@ -40,7 +40,7 @@ const QuizResults = ({ navigation, route }) => {
 									/>
 									<View>
 										<Text style={styles.title}>
-											Congratulations.!{'\n'}You got {resData.marks.marks}
+											Congratulations.!{'\n'}You got 10
 										</Text>
 										{/* <Text style={styles.title3}>
                       Veniam aliquip irure culpa aute aliqua nostrud magna velit
@@ -55,9 +55,9 @@ const QuizResults = ({ navigation, route }) => {
 										<TouchableOpacity
 											style={styles.buttonStyle}
 											activeOpacity={0.5}
-											onPress={() => navigation.navigate('English')}
+											onPress={() => navigation.navigate('Speech')}
 										>
-											<Text style={styles.buttonTextStyle}>English Quiz</Text>
+											<Text style={styles.buttonTextStyle}>Speech</Text>
 										</TouchableOpacity>
 										<TouchableOpacity
 											style={styles.buttonStyle2}

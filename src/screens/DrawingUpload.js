@@ -83,7 +83,8 @@ const DrawingUpload = ({ navigation, route }) => {
 	};
 	const uploadSketch = async (fileUrl) => {
 		setLoading(true);
-				navigation.navigate('DrawingResults', { resData });
+				navigation.navigate('DrawingResults');
+				// navigation.navigate('DrawingResults', { resData });
 
 		// console.log('upload', curSketch);
 		// console.log('🧑‍🚀🧑‍🚀', fileUrl);

@@ -7,13 +7,15 @@ import { icons, images, SIZES, COLORS, FONTS } from '../constants';
 import { getFinalPredictApi } from '../api/getFinaPredictionAPI';
 
 const FinalPrediction = ({ navigation, route }) => {
-	const { userResults } = route.params;
-	const [ res, setRes ] = useState();
+	// const { userResults } = route.params;
+	const [ res, setRes ] = useState({
+		predicted_grade: 'Minimally Effective',
+	});
 
 	useEffect(() => {
-		console.log('tag', userResults);
-		console.log('tag', userResults);
-		getFinalPredictApi(userResults)
+		// console.log('tag', userResults);
+		// console.log('tag', userResults);
+		getFinalPredictApi()
 			.then((response) => {
 				if (response.error) {
 					console.log('error', response);
