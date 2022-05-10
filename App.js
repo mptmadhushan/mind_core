@@ -30,6 +30,7 @@ import QuizPred from './src/screens/QuizPred';
 import FinalPerformance from './src/screens/FinalPerformance';
 import FinalPrediction from './src/screens/FinalPrediction';
 import Refs from './src/screens/Refs';
+import Chat from './src/screens/Chat';
 
 const App = () => {
   return (
@@ -61,6 +62,7 @@ const App = () => {
           <Stack.Screen name="IQ" component={IQ} />
           <Stack.Screen name="Refs" component={Refs} />
           <Stack.Screen name="DrawingResults" component={DrawingResults} />
+          <Stack.Screen name="Chat" component={Chat} />
           <Stack.Screen name="IQResults" component={IQResults} />
         </Stack.Navigator>
       </NavigationContainer>

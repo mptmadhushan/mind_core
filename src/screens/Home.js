@@ -52,6 +52,12 @@ const Home = ({navigation}) => {
               onPress={() => logOut()}>
               <Text style={styles.buttonTextStyle}>Log Out</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonStyle}
+              activeOpacity={0.5}
+              onPress={() => navigation.navigate('Chat')}>
+              <Text style={styles.buttonTextStyle}>Chat</Text>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </SafeAreaView>
@@ -118,8 +124,8 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginLeft: 35,
     marginRight: 35,
-    marginTop: 20,
-    marginBottom: 25,
+    // marginTop: 20,
+    marginBottom: 5,
   },
   buttonTextStyle: {
     fontFamily: 'Oh Whale - TTF',
