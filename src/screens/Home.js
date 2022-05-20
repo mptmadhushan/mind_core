@@ -39,7 +39,7 @@ const Home = ({navigation}) => {
                 navigation.navigate('IQ');
               }}>
               <ImageBackground
-                style={{height: '100%', width: '100%'}}
+                style={{height: '100%', width: '100%',marginTop:'-15%'}}
                 source={require('../assets/teacher.png')}>
                 <Text style={styles.title}>
                   Tap! {'\n'}to start IQ Test{'\n'}TEST
@@ -57,6 +57,13 @@ const Home = ({navigation}) => {
               activeOpacity={0.5}
               onPress={() => navigation.navigate('Chat')}>
               <Text style={styles.buttonTextStyle}>Chat</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonStyle}
+              activeOpacity={0.5}
+              onPress={() => navigation.navigate('MemGame')}>
+              <Text style={styles.buttonTextStyle}>Game</Text>
             </TouchableOpacity>
           </View>
         </ImageBackground>

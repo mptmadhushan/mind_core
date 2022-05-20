@@ -31,6 +31,7 @@ import FinalPerformance from './src/screens/FinalPerformance';
 import FinalPrediction from './src/screens/FinalPrediction';
 import Refs from './src/screens/Refs';
 import Chat from './src/screens/Chat';
+import MemGame from './src/screens/MemGame';
 
 const App = () => {
   return (
@@ -64,6 +65,7 @@ const App = () => {
           <Stack.Screen name="DrawingResults" component={DrawingResults} />
           <Stack.Screen name="Chat" component={Chat} />
           <Stack.Screen name="IQResults" component={IQResults} />
+          <Stack.Screen name="MemGame" component={MemGame} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
