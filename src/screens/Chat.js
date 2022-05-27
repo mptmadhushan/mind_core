@@ -26,7 +26,7 @@ export default function Chat() {
         renderLoading={ActivityIndicatorElement}
         //Want to show the view or not
         startInLoadingState={true}
-        source={{uri: 'https://Shahen.smgbw.lk'}}
+        source={{uri: 'https://kosalaproject.000webhostapp.com/'}}
       />
     </SafeAreaView>
   );
