@@ -73,26 +73,27 @@ const Quiz = ({navigation}) => {
   );
 
   useEffect(() => {
-    getSketchApi()
-      .then(response => {
-        if (response.error) {
-          console.log('error', response.error);
-          // showToast(response.error);
-          return;
-        }
-        const {data} = response;
-        setSketch(data);
-        // console.log(data);
-        const newUrl = data.name;
-        setImage(newUrl);
-        console.log(newUrl);
-      })
-      .catch(error => {
-        console.log(error);
-      })
-      .finally(() => {
-        // setLoading(false);
-      });
+    // getSketchApi()
+    //   .then(response => {
+    //     if (response.error) {
+    //       console.log('error', response.error);
+    //       // showToast(response.error);
+    //       return;
+    //     }
+    //     const {data} = response;
+    //     setSketch(data);
+    //     // console.log(data);
+    //     const newUrl = data.name;
+    //     setImage(newUrl);
+    //     console.log(newUrl);
+    //   })
+    //   .catch(error => {
+    //     console.log(error);
+    //   })
+    //   .finally(() => {
+    //     // setLoading(false);
+    //   });
+    // handlePlay();
   }, []);
   function renderQuiz() {
     return (
@@ -125,8 +126,7 @@ const Quiz = ({navigation}) => {
                 <Image
                   style={{height: '100%', width: '100%'}}
                   source={curSketch.image}
-                  resizeMode="contain"
-                />
+                  resizeMode="contain"></Image>
               ) : null}
               <Modal
                 animationType="slide"
@@ -193,8 +193,7 @@ const Quiz = ({navigation}) => {
                       alignItems: 'center',
                       justifyContent: 'center',
                       padding: 10,
-                    }}
-                  />
+                    }}></View>
                 </ImageBackground>
               </View>
               <View
@@ -233,7 +232,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff715b',
+    borderColor: '#00BFA6',
     height: 40,
     width: 100,
     alignItems: 'center',
@@ -393,7 +392,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff715b',
+    borderColor: '#00BFA6',
     height: 30,
     width: 50,
     alignItems: 'center',

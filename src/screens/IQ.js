@@ -33,9 +33,8 @@ const Iq = ({navigation}) => {
           return;
         }
         const {data} = response;
-        console.log('🚀 ~ file: IQ.js ~ line 35 ~ useEffect ~ data', data);
         setIq(data);
-        // setLoading(false);
+        setLoading(false);
       })
       .catch(error => {
         console.log(error);
@@ -72,7 +71,7 @@ const Iq = ({navigation}) => {
     console.log('response 🍡');
     console.log(theArray.length);
     if (theArray.length === 10) {
-      console.log('arr length', theArray.length);
+      console.log('arr length', theArray);
       getResultAPI(theArray)
         .then(response => {
           if (response.error) {
@@ -99,6 +98,7 @@ const Iq = ({navigation}) => {
   const handleAnswerOptionClick = (selectedAns, id) => {
     console.log(selectedAns, id);
     console.log(currQuiz);
+    // setTime(Date.now());
 
     var end = Date.now();
     const milles = end - time;
@@ -109,14 +109,14 @@ const Iq = ({navigation}) => {
       time_taken: seconds,
     };
     setTheArray(theArray => [...theArray, ansToSend]);
-    if (currQuiz < 19) {
+    if (currQuiz < 12) {
       setCurrQuiz(currQuiz + 1);
       const preQ = {
         answer: selectedAns,
         id: id,
         time_taken: parseInt(seconds),
       };
-      console.log('preQ__>', preQ);
+      console.log('preQ', preQ);
       setLoading(true);
       getNextQ(preQ)
         .then(response => {
@@ -141,11 +141,11 @@ const Iq = ({navigation}) => {
         });
       if (currQuiz > 8) {
         const newArr = theArray;
-        // setTimeout(() => {
-        setLoading(true);
-        console.log('naci');
-        navigateTores();
-        // }, 200);
+        setTimeout(() => {
+          setLoading(true);
+          console.log('naci');
+          navigateTores();
+        }, 200);
       }
     }
   };

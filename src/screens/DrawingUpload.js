@@ -83,43 +83,41 @@ const DrawingUpload = ({navigation, route}) => {
   };
   const uploadSketch = async fileUrl => {
     setLoading(true);
-    navigation.navigate('DrawingResults');
-    // navigation.navigate('DrawingResults', { resData });
 
-    // console.log('upload', curSketch);
-    // console.log('🧑‍🚀🧑‍🚀', fileUrl);
-    // let formData = new FormData();
+    console.log('upload', curSketch);
+    console.log('🧑‍🚀🧑‍🚀', fileUrl);
+    let formData = new FormData();
 
-    // formData.append('image', {
-    // 	uri: fileUrl,
-    // 	type: 'image/jpeg',
-    // 	name: 'sketch.jpg'
-    // });
+    formData.append('image', {
+      uri: fileUrl,
+      type: 'image/jpeg',
+      name: 'sketch.jpg',
+    });
 
-    // formData.append('sketch_id', curSketch.id);
-    // console.log(formData);
+    formData.append('sketch_id', curSketch.id);
+    console.log(formData);
 
-    // sketchApi(formData)
-    // 	.then((response) => {
-    // 		if (response.error) {
-    // 			console.log('error', response.error);
-    // 			// showToast(response.error);
-    // 			return;
-    // 		}
+    sketchApi(formData)
+      .then(response => {
+        if (response.error) {
+          console.log('error', response.error);
+          // showToast(response.error);
+          return;
+        }
 
-    // 		const resData = response.data;
-    // 		console.log('res', resData);
-    // 		navigation.navigate('DrawingResults', { resData });
-    // 		setLoading(false);
-    // 	})
-    // 	.catch((error) => {
-    // 		console.log('error', error);
+        const resData = response.data;
+        console.log('res', resData);
+        navigation.navigate('DrawingResults', {resData});
+        setLoading(false);
+      })
+      .catch(error => {
+        console.log('error', error);
 
-    // 		// showToast(error.response.data.message);
-    // 	})
-    // 	.finally(() => {
-    // 		// setLoading(false);
-    // 	});
+        // showToast(error.response.data.message);
+      })
+      .finally(() => {
+        // setLoading(false);
+      });
   };
   function renderQuiz() {
     return (
@@ -127,7 +125,7 @@ const DrawingUpload = ({navigation, route}) => {
         <ImageBackground
           style={styles.containerNew}
           source={require('../assets/drawingUp.jpg')}>
-          {/* <Loader loading={loading} /> */}
+          <Loader loading={loading} />
 
           <View style={styles.containerNew}>
             <View
@@ -436,7 +434,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff715b',
+    borderColor: '#00BFA6',
     height: 30,
     width: 50,
     alignItems: 'center',
