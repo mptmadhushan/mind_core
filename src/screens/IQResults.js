@@ -68,8 +68,8 @@ const QuizResults = ({navigation, route}) => {
                     <TouchableOpacity
                       style={styles.buttonStyle}
                       activeOpacity={0.5}
-                      onPress={() => navigation.navigate('English')}>
-                      <Text style={styles.buttonTextStyle}>English Quiz</Text>
+                      onPress={() => navigation.navigate('Speech')}>
+                      <Text style={styles.buttonTextStyle}>Speech</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                       style={styles.buttonStyle2}
