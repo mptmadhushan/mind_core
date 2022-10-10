@@ -39,7 +39,7 @@ const Home = ({navigation}) => {
                 navigation.navigate('IQ');
               }}>
               <ImageBackground
-                style={{height: '100%', width: '100%',marginTop:'-15%'}}
+                style={{height: '100%', width: '100%', marginTop: '-15%'}}
                 source={require('../assets/teacher.png')}>
                 <Text style={styles.title}>
                   Tap! {'\n'}to start IQ Test{'\n'}TEST
