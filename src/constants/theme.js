@@ -3,10 +3,10 @@ const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
   // base colors
-  primary: '#ff715b', // orange
+  primary: '#35A7FF', // orange
   secondary: '#4c5454', // gray
   third: '#523f38', // gray
-  fourth: '#ff715b', // gray
+  fourth: '#35A7FF', // gray
 
   // colors
   black: '#1E1F20',
@@ -70,7 +70,8 @@ export const FONTS = {
     fontSize: 42,
     textAlign: 'center',
     marginTop: 40,
-    color: '#ff715b',
+    // fontWeight: 'bold',
+    color: '#111',
 
     // fontWeight: 'bold',
   },

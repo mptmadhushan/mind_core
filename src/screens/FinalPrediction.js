@@ -55,7 +55,7 @@ const FinalPrediction = ({navigation, route}) => {
             style={{flex: 1}}
             source={require('../assets/6ob.gif')}>
             <View>
-              <Text style={styles.title}>predict performance</Text>
+              <Text style={styles.title}>Predict Performance</Text>
             </View>
             {res ? (
               <View>
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff6150',
+    borderColor: '#35A7FF',
     height: 40,
     width: SIZES.width / 1.5,
     alignItems: 'center',
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
   },
   title: {
     marginTop: SIZES.height / 2.7,
-    fontSize: 30,
+    fontSize: 32,
     padding: 15,
     color: COLORS.secondary,
     fontWeight: 'bold',
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   title2: {
-    fontSize: 25,
+    fontSize: 20,
     padding: 15,
     color: COLORS.white,
     fontWeight: 'bold',

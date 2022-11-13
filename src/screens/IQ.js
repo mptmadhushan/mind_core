@@ -108,6 +108,7 @@ const Iq = ({navigation}) => {
       given_answer: selectedAns,
       time_taken: seconds,
     };
+    console.log('and to send', ansToSend);
     setTheArray(theArray => [...theArray, ansToSend]);
     if (currQuiz < 12) {
       setCurrQuiz(currQuiz + 1);
@@ -353,7 +354,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#00BFA6',
+    borderColor: '#35A7FF',
     height: 40,
     width: 100,
     alignItems: 'center',
@@ -368,7 +369,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#00BFA6',
+    borderColor: '#35A7FF',
     height: 30,
     width: 50,
     alignItems: 'center',

@@ -327,7 +327,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff715b',
+    borderColor: '#35A7FF',
     height: 40,
     width: 100,
     alignItems: 'center',

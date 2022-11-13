@@ -23,6 +23,8 @@ const OnBoard = ({navigation}) => {
             <Text style={{...FONTS.titleHome}}>Welcome to MindCore</Text>
             <Image
               source={require('../assets/logo.png')}
+              source={require('../assets/logo.png')}
+              source={require('../assets/logo.png')}
               style={{
                 width: SIZES.width * 0.8,
                 marginTop: 50,
@@ -41,7 +43,7 @@ const OnBoard = ({navigation}) => {
               paddingHorizontal: 25,
               marginBottom: 50,
               justifyContent: 'center',
-              backgroundColor: '#ff715b',
+              backgroundColor: '#35A7FF',
             }}>
             <Text style={{...FONTS.h3, color: COLORS.white}}>Let's Go</Text>
           </TouchableOpacity>

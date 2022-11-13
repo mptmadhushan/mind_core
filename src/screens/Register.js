@@ -72,148 +72,147 @@ const RegisterScreen = ({navigation}) => {
     <View style={styles.mainBody}>
       {/* <Loader loading={loading} /> */}
       <ScrollView
-        keyboardShouldPersistTaps="handled"
+        keyboardShouldPersistTaps="never"
         contentContainerStyle={{
           justifyContent: 'center',
           alignContent: 'center',
         }}>
         <View>
-          <KeyboardAvoidingView enabled>
-            <View style={{alignItems: 'center'}}>
-              <Image
-                source={require('../assets/images/undraw_fatherhood_7i19.png')}
-                style={{
-                  width: '100%',
-                  height: 250,
-                  margin: 10,
-                }}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserName => setUname(UserName)}
-                placeholder="User Name" //dummy@abc.com
-                placeholderTextColor="#8b9cb5"
-                autoCapitalize="none"
-                keyboardType="email-address"
-                returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current && passwordInputRef.current.focus()
-                }
-                underlineColorAndroid="#f000"
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserEmail => setFname(UserEmail)}
-                placeholder="First Name" //dummy@abc.com
-                placeholderTextColor="#8b9cb5"
-                autoCapitalize="none"
-                keyboardType="email-address"
-                returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current && passwordInputRef.current.focus()
-                }
-                underlineColorAndroid="#f000"
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={lastName => setLname(lastName)}
-                placeholder="Last Name" //dummy@abc.com
-                placeholderTextColor="#8b9cb5"
-                autoCapitalize="none"
-                keyboardType="email-address"
-                returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current && passwordInputRef.current.focus()
-                }
-                underlineColorAndroid="#f000"
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={age1 => setAge(age1)}
-                placeholder="Age" //dummy@abc.com
-                placeholderTextColor="#8b9cb5"
-                autoCapitalize="none"
-                keyboardType="numeric"
-                returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current && passwordInputRef.current.focus()
-                }
-                underlineColorAndroid="#f000"
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserEmail => setUserEmail(UserEmail)}
-                placeholder="Enter User Email" //dummy@abc.com
-                placeholderTextColor="#8b9cb5"
-                autoCapitalize="none"
-                keyboardType="email-address"
-                returnKeyType="next"
-                onSubmitEditing={() =>
-                  passwordInputRef.current && passwordInputRef.current.focus()
-                }
-                underlineColorAndroid="#f000"
-                blurOnSubmit={false}
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserPassword => setUserPassword(UserPassword)}
-                placeholder="Enter Password" //12345
-                placeholderTextColor="#8b9cb5"
-                keyboardType="default"
-                ref={passwordInputRef}
-                onSubmitEditing={Keyboard.dismiss}
-                blurOnSubmit={false}
-                secureTextEntry={true}
-                underlineColorAndroid="#f000"
-                returnKeyType="next"
-              />
-            </View>
-            <View style={styles.SectionStyle}>
-              <TextInput
-                style={styles.inputStyle}
-                onChangeText={UserPassword => setUserPasswordConf(UserPassword)}
-                placeholder="Enter Password" //12345
-                placeholderTextColor="#8b9cb5"
-                keyboardType="default"
-                ref={passwordInputRef}
-                onSubmitEditing={Keyboard.dismiss}
-                blurOnSubmit={false}
-                secureTextEntry={true}
-                underlineColorAndroid="#f000"
-                returnKeyType="next"
-              />
-            </View>
-            {errortext != '' ? (
-              <Text style={styles.errorTextStyle}>{errortext}</Text>
-            ) : null}
-            <TouchableOpacity
-              style={styles.buttonStyle}
-              activeOpacity={0.5}
-              onPress={() => onPressReg()}>
-              <Text style={styles.buttonTextStyle}>Register</Text>
-            </TouchableOpacity>
-            <Text
-              style={styles.registerTextStyle}
-              onPress={() => navigation.navigate('Login')}>
-              Already have an account ? SignIn
-            </Text>
-          </KeyboardAvoidingView>
+          {/* <KeyboardAvoidingView> */}
+          <View style={{alignItems: 'center'}}>
+            <Image
+              source={require('../assets/images/undraw_fatherhood_7i19.png')}
+              style={{
+                width: '100%',
+                height: 250,
+                margin: 10,
+              }}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={UserName => setUname(UserName)}
+              placeholder="User Name" //dummy@abc.com
+              placeholderTextColor="#8b9cb5"
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              onSubmitEditing={() =>
+                passwordInputRef.current && passwordInputRef.current.focus()
+              }
+              underlineColorAndroid="#f000"
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={UserEmail => setFname(UserEmail)}
+              placeholder="First Name" //dummy@abc.com
+              placeholderTextColor="#8b9cb5"
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              onSubmitEditing={() =>
+                passwordInputRef.current && passwordInputRef.current.focus()
+              }
+              underlineColorAndroid="#f000"
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={lastName => setLname(lastName)}
+              placeholder="Last Name" //dummy@abc.com
+              placeholderTextColor="#8b9cb5"
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              onSubmitEditing={() =>
+                passwordInputRef.current && passwordInputRef.current.focus()
+              }
+              underlineColorAndroid="#f000"
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={age1 => setAge(age1)}
+              placeholder="Age" //dummy@abc.com
+              placeholderTextColor="#8b9cb5"
+              autoCapitalize="none"
+              keyboardType="numeric"
+              returnKeyType="next"
+              onSubmitEditing={() =>
+                passwordInputRef.current && passwordInputRef.current.focus()
+              }
+              underlineColorAndroid="#f000"
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={UserEmail => setUserEmail(UserEmail)}
+              placeholder="Enter User Email" //dummy@abc.com
+              placeholderTextColor="#8b9cb5"
+              autoCapitalize="none"
+              keyboardType="email-address"
+              returnKeyType="next"
+              onSubmitEditing={() =>
+                passwordInputRef.current && passwordInputRef.current.focus()
+              }
+              underlineColorAndroid="#f000"
+              blurOnSubmit={false}
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={UserPassword => setUserPassword(UserPassword)}
+              placeholder="Enter Password" //12345
+              placeholderTextColor="#8b9cb5"
+              keyboardType="default"
+              ref={passwordInputRef}
+              // onSubmitEditing={Keyboard.dismiss}
+              blurOnSubmit={false}
+              secureTextEntry={true}
+              underlineColorAndroid="#f000"
+              returnKeyType="next"
+            />
+          </View>
+          <View style={styles.SectionStyle}>
+            <TextInput
+              style={styles.inputStyle}
+              onChangeText={UserPassword => setUserPasswordConf(UserPassword)}
+              placeholder="Enter Password" //12345
+              placeholderTextColor="#8b9cb5"
+              keyboardType="default"
+              ref={passwordInputRef}
+              // onSubmitEditing={Keyboard.dismiss}
+              blurOnSubmit={false}
+              secureTextEntry={true}
+              underlineColorAndroid="#f000"
+              returnKeyType="next"
+            />
+          </View>
+          {errortext != '' ? (
+            <Text style={styles.errorTextStyle}>{errortext}</Text>
+          ) : null}
+          <TouchableOpacity
+            style={styles.buttonStyle}
+            activeOpacity={0.5}
+            onPress={() => onPressReg()}>
+            <Text style={styles.buttonTextStyle}>Register</Text>
+          </TouchableOpacity>
+          <Text
+            style={styles.registerTextStyle}
+            onPress={() => navigation.navigate('Login')}>
+            Already have an account ? SignIn
+          </Text>
         </View>
       </ScrollView>
     </View>

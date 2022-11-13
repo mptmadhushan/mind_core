@@ -10,7 +10,7 @@ let flips = 0;
 let matchedCard = 0;
 let disableDeck = false;
 let isPlaying = false;
-let cardOne, cardTwo, timer, timer2;
+let cardOne, cardTwo, timer;
 
 function initTimer() {
   if (timeLeft <= 0) {
@@ -43,13 +43,9 @@ function flipCard({target: clickedCard}) {
 function matchCards(img1, img2) {
   if (img1 === img2) {
     matchedCard++;
-    if (matchedCard == 4 && timeLeft > 0) {
-      window.location.href="index2.html";
+    if (matchedCard == 6 && timeLeft > 0) {
       return clearInterval(timer);
     }
-    //  if (matchedCard == 4 && timeLeft > 0) {
-    //   return clearInterval(timer);
-    // }
     cardOne.removeEventListener('click', flipCard);
     cardTwo.removeEventListener('click', flipCard);
     cardOne = cardTwo = '';
@@ -78,8 +74,8 @@ function shuffleCard() {
   flipsTag.innerText = flips;
   disableDeck = isPlaying = false;
 
-  let arr = [1, 2, 3, 4, 1, 2, 3, 4];
-  arr.sort(() => (Math.random() > 0.4 ? 1 : -1));
+  let arr = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4];
+  arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
   cards.forEach((card, index) => {
     card.classList.remove('flip');

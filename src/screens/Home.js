@@ -122,10 +122,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonStyle: {
-    backgroundColor: '#ff715b',
+    backgroundColor: '#35A7FF',
     borderWidth: 0,
     color: '#FFFFFF',
-    borderColor: '#ff715b',
+    borderColor: '#35A7FF',
     height: 40,
     alignItems: 'center',
     borderRadius: 30,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Oh Whale - TTF',
     color: '#FFFFFF',
     paddingVertical: 10,
-    fontSize: 16,
+    fontSize: 20,
   },
 });
 

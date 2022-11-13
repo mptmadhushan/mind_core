@@ -36,6 +36,7 @@ const LoginScreen = ({navigation}) => {
   };
   const passwordInputRef = createRef();
   useEffect(() => {
+    // onPressLogin();
     getUserToken().then(token => {
       if (token) {
         setClientToken(token);
@@ -43,12 +44,12 @@ const LoginScreen = ({navigation}) => {
         navigation.navigate('Home');
       }
     });
-  });
+  }, []);
 
   const onPressLogin = () => {
     const payload = {
-      email: userEmail,
-      password: userPassword,
+      email: 'dev@gmail.com',
+      password: 'Passport@1',
     };
 
     setLoading(true);
@@ -82,8 +83,9 @@ const LoginScreen = ({navigation}) => {
   return (
     <View style={styles.mainBody}>
       {/* <Loader loading={loading} /> */}
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
+      <View
+        // keyboardShouldPersistTaps={true}
+        // keyboardDismissMode="on-drag"
         contentContainerStyle={{
           flex: 1,
           justifyContent: 'center',
@@ -149,7 +151,7 @@ const LoginScreen = ({navigation}) => {
             </Text>
           </KeyboardAvoidingView>
         </View>
-      </ScrollView>
+      </View>
     </View>
   );
 };
@@ -171,10 +173,10 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonStyle: {
-    backgroundColor: '#ff715b',
+    backgroundColor: '#35A7FF',
     borderWidth: 0,
     color: '#FFFFFF',
-    borderColor: '#ff715b',
+    borderColor: '#35A7FF',
     height: 40,
     alignItems: 'center',
     borderRadius: 30,

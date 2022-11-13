@@ -55,16 +55,7 @@ const QuizResults = ({navigation, route}) => {
                     <Text style={styles.title}>
                       Congratulations.!{'\n'}You got {resData.marks.marks}
                     </Text>
-                    {/* <Text style={styles.title3}>
-                      Veniam aliquip irure culpa aute aliqua nostrud magna velit
-                      id veniam fugiat. Do voluptate tempor dolor adipisicing et
-                      ex eiusmod ea aliquip. Proident sint qui laborum dolor
-                      Lorem ullamco sint ad incididunt aliquip aute irure ut
-                      deserunt. Quis velit dolore adipisicing ullamco dolore sit
-                      labore duis adipisicing aute cupidatat adipisicing.
-                      Deserunt esse aliqua aute mollit exercitation incididunt
-                      eiusmod magna cupidatat sunt minim quis occaecat non.
-                    </Text> */}
+
                     <TouchableOpacity
                       style={styles.buttonStyle}
                       activeOpacity={0.5}
@@ -100,7 +91,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.secondary,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#00BFA6',
+    borderColor: '#35A7FF',
     height: 40,
     width: SIZES.width / 1.5,
     alignItems: 'center',
@@ -115,7 +106,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.fourth,
     borderWidth: 0,
     color: COLORS.third,
-    borderColor: '#ff6150',
+    borderColor: '#35A7FF',
     height: 40,
     width: SIZES.width / 1.5,
     alignItems: 'center',
