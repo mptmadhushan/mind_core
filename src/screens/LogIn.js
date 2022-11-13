@@ -48,8 +48,8 @@ const LoginScreen = ({navigation}) => {
 
   const onPressLogin = () => {
     const payload = {
-      email: 'dev@gmail.com',
-      password: 'Passport@1',
+      email: 'root@root.com',
+      password: 'root',
     };
 
     setLoading(true);
